@@ -1,426 +1,248 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0.1 (Python 3.12.2 on darwin)" generated="2024-08-01T11:14:07.312897" rpa="false" schemaversion="5">
-<suite id="s1" name="Po" source="/Users/helena_czekster/Desktop/QA/Iterasys/ListaFinal4/tests/web/po">
-<kw name="Obter Data e hora" owner="base_page" type="SETUP">
-<kw name="Get Current Date" owner="DateTime">
-<msg time="2024-08-01T11:14:07.697945" level="INFO">${date} = 2024-08-01 11:14:07.698</msg>
-<var>${date}</var>
-<doc>Returns current local or UTC time with an optional increment.</doc>
-<status status="PASS" start="2024-08-01T11:14:07.697036" elapsed="0.004466"/>
-</kw>
-<kw name="Convert Date" owner="DateTime">
-<msg time="2024-08-01T11:14:07.706792" level="INFO">${date} = 2024.08.01_11.14.07</msg>
-<var>${date}</var>
-<arg>${date}</arg>
-<arg>result_format=%Y.%m.%d_%H.%M.%S</arg>
-<doc>Converts between supported `date formats`.</doc>
-<status status="PASS" start="2024-08-01T11:14:07.702082" elapsed="0.004890"/>
-</kw>
-<kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-08-01T11:14:07.707571" level="INFO">${date} = 2024.08.01_11.14.07</msg>
-<msg time="2024-08-01T11:14:07.707730" level="INFO">${date} = None</msg>
-<var>${date}</var>
-<arg>${date}</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-08-01T11:14:07.707250" elapsed="0.000596"/>
-</kw>
-<status status="PASS" start="2024-08-01T11:14:07.695202" elapsed="0.012788"/>
-</kw>
-<suite id="s1-s1" name="Fluxo Compras Po" source="/Users/helena_czekster/Desktop/QA/Iterasys/ListaFinal4/tests/web/po/fluxo_compras_po.robot">
-<test id="s1-s1-t1" name="Comprar Mini Orquidea Lilas" line="5">
-<kw name="Abrir navegador" owner="base_page" type="SETUP">
-<kw name="Register Keyword To Run On Failure" owner="SeleniumLibrary">
-<msg time="2024-08-01T11:14:07.720543" level="INFO">Tirar Screenshot will be run on failure.</msg>
-<arg>Tirar Screenshot</arg>
-<doc>Sets the keyword to execute, when a SeleniumLibrary keyword fails.</doc>
-<status status="PASS" start="2024-08-01T11:14:07.720297" elapsed="0.000419"/>
-</kw>
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-08-01T11:14:07.721282" level="INFO">Opening browser 'Chrome' to base url 'https://www.giulianaflores.com.br/'.</msg>
-<arg>url=${url}</arg>
-<arg>browser=${browser}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-08-01T11:14:07.720936" elapsed="4.261282"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-08-01T11:14:11.987464" elapsed="0.478016"/>
-</kw>
-<kw name="Set Browser Implicit Wait" owner="SeleniumLibrary">
-<arg>10s</arg>
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2024-08-01T11:14:12.466706" elapsed="0.012102"/>
-</kw>
-<status status="PASS" start="2024-08-01T11:14:07.719899" elapsed="4.759361"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-08-01T11:14:32.483384" level="INFO">Slept 20 seconds.</msg>
-<arg>20s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-08-01T11:14:12.481601" elapsed="20.003633"/>
-</kw>
-<kw name="Clicar no Menu" owner="login_page">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-08-01T11:14:32.495646" level="INFO">Clicking element 'id=perfil-hidden'.</msg>
-<arg>${menu_login}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-01T11:14:32.494926" elapsed="0.067965"/>
-</kw>
-<status status="PASS" start="2024-08-01T11:14:32.493291" elapsed="0.070582"/>
-</kw>
-<kw name="Clicar em Login" owner="login_page">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-08-01T11:14:32.575266" level="INFO">Clicking element 'id=UrlLogin'.</msg>
-<arg>${btn_login}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-01T11:14:32.574935" elapsed="2.711929"/>
-</kw>
-<status status="PASS" start="2024-08-01T11:14:32.572140" elapsed="2.715140"/>
-</kw>
-<kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-08-01T11:14:35.291748" level="INFO">Verifying element 'css=.titulo-dept' contains exact text 'IDENTIFICAÇÃO'.</msg>
-<arg>${titulo_login}</arg>
-<arg>IDENTIFICAÇÃO</arg>
-<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-08-01T11:14:35.291074" elapsed="0.034995"/>
-</kw>
-<kw name="Aceitar Pop Up" owner="login_page">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-08-01T11:14:35.327193" level="INFO">Clicking element 'id=adopt-accept-all-button'.</msg>
-<arg>${aceitar_pop_up}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-01T11:14:35.326917" elapsed="0.177297"/>
-</kw>
-<status status="PASS" start="2024-08-01T11:14:35.326536" elapsed="0.177954"/>
-</kw>
-<kw name="Preencher usuario" owner="login_page">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-08-01T11:14:35.508310" level="INFO">Typing text 'igor_tiago_galvao@teadit.com.br' into text field 'id=ContentSite_txtEmail'.</msg>
-<arg>${txt_usuario}</arg>
-<arg>${usuario}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-01T11:14:35.507759" elapsed="0.372752"/>
-</kw>
-<arg>igor_tiago_galvao@teadit.com.br</arg>
-<status status="PASS" start="2024-08-01T11:14:35.505945" elapsed="0.375066"/>
-</kw>
-<kw name="Clicar no botao Login" owner="login_page">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-08-01T11:14:35.883805" level="INFO">Clicking element 'id=ContentSite_ibtContinue'.</msg>
-<arg>${btn_continue_login}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-01T11:14:35.883048" elapsed="0.080554"/>
-</kw>
-<status status="PASS" start="2024-08-01T11:14:35.882211" elapsed="0.081614"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-08-01T11:15:05.971970" level="INFO">Slept 30 seconds.</msg>
-<arg>30s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-08-01T11:14:35.964736" elapsed="30.008091"/>
-</kw>
-<kw name="Preencher senha" owner="login_page">
-<kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2024-08-01T11:15:05.976884" level="INFO">Typing password into text field 'id=ContentSite_txtPassword'.</msg>
-<msg time="2024-08-01T11:15:06.021862" level="INFO">Temporally setting log level to: NONE</msg>
-<arg>${txt_senha}</arg>
-<arg>${senha}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-01T11:15:05.975596" elapsed="0.105715"/>
-</kw>
-<arg>Andorinha123</arg>
-<status status="PASS" start="2024-08-01T11:15:05.974205" elapsed="0.107324"/>
-</kw>
-<kw name="Clicar no botao Login" owner="login_page">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-08-01T11:15:06.082531" level="INFO">Clicking element 'id=ContentSite_ibtContinue'.</msg>
-<arg>${btn_continue_login}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-01T11:15:06.082250" elapsed="2.822290"/>
-</kw>
-<status status="PASS" start="2024-08-01T11:15:06.081867" elapsed="2.823483"/>
-</kw>
-<kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-08-01T11:15:08.913916" level="INFO">Verifying element 'xpath=//h3[contains(text(),'União das Belas Orquideas Brancas e Lilás')]' contains exact text 'União das Belas Orquideas Brancas e Lilás'.</msg>
-<arg>${item_product_name}</arg>
-<arg>União das Belas Orquideas Brancas e Lilás</arg>
-<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-08-01T11:15:08.906360" elapsed="0.042879"/>
-</kw>
-<kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-08-01T11:15:08.950010" level="INFO">Verifying element 'css=div.container_full:nth-child(11) main.content-site:nth-child(8) main.main:nth-child(3) section.product-container:nth-child(2) div.product-container-left main.slider.content-left div.carousel-position-left.banner-product.owl-carousel.owl-theme div.owl-wrapper-outer div.owl-wrapper div.owl-item:nth-child(1) div.product-item a.list-carousel div.price &gt; span.actual-price' contains exact text 'R$ 209,90'.</msg>
-<arg>${item_product_price}</arg>
-<arg>R$ 209,90</arg>
-<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-08-01T11:15:08.949636" elapsed="0.062732"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-08-01T11:15:14.014045" level="INFO">Slept 5 seconds.</msg>
-<arg>5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-08-01T11:15:09.012715" elapsed="5.001735"/>
-</kw>
-<kw name="Tirar Screenshot" owner="base_page">
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-08-01T11:15:14.959372" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/giuliana/2024.08.01_11.14.07/Comprar%20Mini%20Orquidea%20Lilas/1-P%C3%A1gina%20Selecionar%20Produto.jpg"&gt;&lt;img src="screenshots/giuliana/2024.08.01_11.14.07/Comprar%20Mini%20Orquidea%20Lilas/1-P%C3%A1gina%20Selecionar%20Produto.jpg" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-08-01T11:15:14.959955" level="INFO">/Users/helena_czekster/Desktop/QA/Iterasys/ListaFinal4/.venv/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py:829: UserWarning: name used for saved screenshot does not match file type. It should end with a `.png` extension
-  return self.get_screenshot_as_file(filename)</msg>
-<arg>screenshots/giuliana/${date}/${TEST_NAME}/${screenshot_name}.jpg</arg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-08-01T11:15:14.017106" elapsed="0.943136"/>
-</kw>
-<arg>1-Página Selecionar Produto</arg>
-<status status="PASS" start="2024-08-01T11:15:14.015499" elapsed="0.945015"/>
-</kw>
-<kw name="Selecionar Produto na Home" owner="selecionar_produto">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-08-01T11:15:14.963979" level="INFO">Clicking element 'xpath=//h3[contains(text(),'União das Belas Orquideas Brancas e Lilás')]'.</msg>
-<arg>${item_product_name}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-01T11:15:14.963148" elapsed="2.753181"/>
-</kw>
-<status status="PASS" start="2024-08-01T11:15:14.961208" elapsed="2.755345"/>
-</kw>
-<kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-08-01T11:15:17.717643" level="INFO">Verifying element 'xpath=//span[@id='ContentSite_lblProductDsName']' contains exact text 'UNIÃO DAS BELAS ORQUIDEAS BRANCAS E LILÁS'.</msg>
-<arg>${name_flor}</arg>
-<arg>UNIÃO DAS BELAS ORQUIDEAS BRANCAS E LILÁS</arg>
-<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-08-01T11:15:17.717117" elapsed="0.038661"/>
-</kw>
-<kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-08-01T11:15:17.764123" level="INFO">Verifying element 'css=div.container_full:nth-child(13) main.content-site:nth-child(4) div:nth-child(9) div.prod:nth-child(1) div.prod_col2 div.preco_prod:nth-child(7) &gt; span.precoPor_prod:nth-child(3)' contains exact text 'R$ 209,90'.</msg>
-<arg>${price_flor}</arg>
-<arg>R$ 209,90</arg>
-<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-08-01T11:15:17.760706" elapsed="0.045109"/>
-</kw>
-<kw name="Tirar Screenshot" owner="base_page">
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-08-01T11:15:18.175709" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/giuliana/2024.08.01_11.14.07/Comprar%20Mini%20Orquidea%20Lilas/2-P%C3%A1gina%20Selecionar%20Dia%20da%20Entrega.jpg"&gt;&lt;img src="screenshots/giuliana/2024.08.01_11.14.07/Comprar%20Mini%20Orquidea%20Lilas/2-P%C3%A1gina%20Selecionar%20Dia%20da%20Entrega.jpg" width="800px"&gt;&lt;/a&gt;</msg>
-<arg>screenshots/giuliana/${date}/${TEST_NAME}/${screenshot_name}.jpg</arg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-08-01T11:15:17.807466" elapsed="0.368511"/>
-</kw>
-<arg>2-Página Selecionar Dia da Entrega</arg>
-<status status="PASS" start="2024-08-01T11:15:17.806476" elapsed="0.369663"/>
-</kw>
-<kw name="Preencher campo CEP" owner="selecionar_dia_entrega">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-08-01T11:15:18.178699" level="INFO">Typing text '04535902' into text field 'id=ContentSite_txtZip'.</msg>
-<arg>${txt_cep}</arg>
-<arg>${cep}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-01T11:15:18.177428" elapsed="0.119648"/>
-</kw>
-<arg>04535902</arg>
-<status status="PASS" start="2024-08-01T11:15:18.176866" elapsed="0.120437"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-08-01T11:15:23.299095" level="INFO">Slept 5 seconds.</msg>
-<arg>5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-08-01T11:15:18.297605" elapsed="5.001965"/>
-</kw>
-<kw name="Clicar botao OK" owner="selecionar_dia_entrega">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-08-01T11:15:23.302363" level="INFO">Clicking element 'css=.jOpenShippingPopup'.</msg>
-<arg>${btn_ok_cep}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-01T11:15:23.301582" elapsed="0.404794"/>
-</kw>
-<status status="PASS" start="2024-08-01T11:15:23.300638" elapsed="0.406497"/>
-</kw>
-<kw name="Escolher data de entrega" owner="selecionar_dia_entrega">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-08-01T11:15:23.715175" level="INFO">Clicking element 'css=.selectDate'.</msg>
-<arg>${btn_data}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-01T11:15:23.714427" elapsed="1.746546"/>
-</kw>
-<status status="PASS" start="2024-08-01T11:15:23.711695" elapsed="1.749563"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-08-01T11:15:35.463420" level="INFO">Slept 10 seconds.</msg>
-<arg>10s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-08-01T11:15:25.461757" elapsed="10.002305"/>
-</kw>
-<kw name="Confirmar Data de Entrega" owner="selecionar_dia_entrega">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-08-01T11:15:35.468235" level="INFO">Clicking element 'id=btConfirmShippingData'.</msg>
-<arg>${btn_confirma_data}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-01T11:15:35.466828" elapsed="1.227662"/>
-</kw>
-<status status="PASS" start="2024-08-01T11:15:35.465500" elapsed="1.229385"/>
-</kw>
-<kw name="Adicionar produto ao carrinho" owner="selecionar_dia_entrega">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-08-01T11:15:36.698186" level="INFO">Clicking element 'id=ContentSite_lbtBuy'.</msg>
-<arg>${btn_add_cart}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-01T11:15:36.697717" elapsed="1.383528"/>
-</kw>
-<status status="PASS" start="2024-08-01T11:15:36.695399" elapsed="1.390003"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-08-01T11:15:43.087984" level="INFO">Slept 5 seconds.</msg>
-<arg>5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-08-01T11:15:38.086163" elapsed="5.002612"/>
-</kw>
-<kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-08-01T11:15:43.092044" level="INFO">Verifying element 'xpath=//a[contains(text(),'União das Belas Orquideas Brancas e Lilás')]' contains exact text 'União das Belas Orquideas Brancas e Lilás'.</msg>
-<arg>${name_orquidea}</arg>
-<arg>União das Belas Orquideas Brancas e Lilás</arg>
-<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-08-01T11:15:43.090353" elapsed="0.033669"/>
-</kw>
-<kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-08-01T11:15:43.125634" level="INFO">Verifying element 'css=div.giuliana2013:nth-child(13) div.content_checkout div.content_basket:nth-child(5) div.upnBasket:nth-child(4) div.box_basket:nth-child(2) div.basket:nth-child(2) ul.prods_basket li:nth-child(1) div.preco_prodBasket.preco-subtotal-produto:nth-child(6) &gt; span.precoPor_basket:nth-child(3)' contains exact text 'R$ 209,90'.</msg>
-<arg>${price_orquidea}</arg>
-<arg>R$ 209,90</arg>
-<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-08-01T11:15:43.124802" elapsed="0.022710"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-08-01T11:15:48.150361" level="INFO">Slept 5 seconds.</msg>
-<arg>5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-08-01T11:15:43.148320" elapsed="5.002648"/>
-</kw>
-<kw name="Tirar Screenshot" owner="base_page">
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-08-01T11:15:48.439399" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/giuliana/2024.08.01_11.14.07/Comprar%20Mini%20Orquidea%20Lilas/3-P%C3%A1gina%20Confirma%20Dados%20Compra.jpg"&gt;&lt;img src="screenshots/giuliana/2024.08.01_11.14.07/Comprar%20Mini%20Orquidea%20Lilas/3-P%C3%A1gina%20Confirma%20Dados%20Compra.jpg" width="800px"&gt;&lt;/a&gt;</msg>
-<arg>screenshots/giuliana/${date}/${TEST_NAME}/${screenshot_name}.jpg</arg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-08-01T11:15:48.154551" elapsed="0.285110"/>
-</kw>
-<arg>3-Página Confirma Dados Compra</arg>
-<status status="PASS" start="2024-08-01T11:15:48.152746" elapsed="0.287081"/>
-</kw>
-<kw name="Clicar no botao Continuar" owner="confirma_dados_compra">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-08-01T11:15:48.440887" level="INFO">Clicking element 'id=ContentSite_Basketcontrol1_rptBasket_imbFinalize_0'.</msg>
-<arg>${btn_continue_compra}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-01T11:15:48.440598" elapsed="0.102387"/>
-</kw>
-<status status="PASS" start="2024-08-01T11:15:48.440223" elapsed="0.103012"/>
-</kw>
-<kw name="Preencher campo Nome do Destinatário" owner="dados_destinatario">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-08-01T11:15:48.545061" level="INFO">Typing text 'Cristina' into text field 'id=txtDsDestinationName'.</msg>
-<arg>${txt_name_destinatario}</arg>
-<arg>${name_destinatario}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-01T11:15:48.544691" elapsed="2.177065"/>
-</kw>
-<arg>Cristina</arg>
-<status status="PASS" start="2024-08-01T11:15:48.543809" elapsed="2.178167"/>
-</kw>
-<kw name="Escolher Tipo do Endereco" owner="dados_destinatario">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-08-01T11:15:50.723231" level="INFO">Clicking element 'id=ContentSite_rptDeliveryAddress_rbtFgPersonalAddress_0_1_0'.</msg>
-<arg>${choose_type_adress}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-01T11:15:50.722944" elapsed="0.077196"/>
-</kw>
-<status status="PASS" start="2024-08-01T11:15:50.722479" elapsed="0.077923"/>
-</kw>
-<kw name="Preencher Numero do Endereco" owner="dados_destinatario">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-08-01T11:15:50.801401" level="INFO">Typing text '70' into text field 'id=txtDsNumber'.</msg>
-<arg>${txt_number_adress}</arg>
-<arg>${number_adress}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-01T11:15:50.801099" elapsed="0.084799"/>
-</kw>
-<arg>70</arg>
-<status status="PASS" start="2024-08-01T11:15:50.800706" elapsed="0.085417"/>
-</kw>
-<kw name="Tirar Screenshot" owner="base_page">
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-08-01T11:15:51.163250" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/giuliana/2024.08.01_11.14.07/Comprar%20Mini%20Orquidea%20Lilas/4-%20Dados%20do%20Destinatario%20Preenchido.jpg"&gt;&lt;img src="screenshots/giuliana/2024.08.01_11.14.07/Comprar%20Mini%20Orquidea%20Lilas/4-%20Dados%20do%20Destinatario%20Preenchido.jpg" width="800px"&gt;&lt;/a&gt;</msg>
-<arg>screenshots/giuliana/${date}/${TEST_NAME}/${screenshot_name}.jpg</arg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-08-01T11:15:50.889665" elapsed="0.273845"/>
-</kw>
-<arg>4- Dados do Destinatario Preenchido</arg>
-<status status="PASS" start="2024-08-01T11:15:50.886975" elapsed="0.276700"/>
-</kw>
-<kw name="Escolher Tipo do Cartao" owner="dados_destinatario">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-08-01T11:15:51.164650" level="INFO">Clicking element 'id=rbBlankGiftCard'.</msg>
-<arg>${choose_type_card}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-01T11:15:51.164376" elapsed="0.077038"/>
-</kw>
-<status status="PASS" start="2024-08-01T11:15:51.164009" elapsed="0.077626"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-08-01T11:15:56.243526" level="INFO">Slept 5 seconds.</msg>
-<arg>5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-08-01T11:15:51.242112" elapsed="5.001866"/>
-</kw>
-<kw name="Clicar no botao Check Out" owner="dados_destinatario">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-08-01T11:15:56.246758" level="INFO">Clicking element 'id=btnContinue'.</msg>
-<arg>${btn_continue_check-out}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-01T11:15:56.246057" elapsed="0.593648"/>
-</kw>
-<status status="PASS" start="2024-08-01T11:15:56.245114" elapsed="0.597541"/>
-</kw>
-<kw name="Realizar Logout" owner="base_page">
-<kw name="Go Back" owner="SeleniumLibrary">
-<doc>Simulates the user clicking the back button on their browser.</doc>
-<status status="PASS" start="2024-08-01T11:15:56.846090" elapsed="6.311948"/>
-</kw>
-<kw name="Go Back" owner="SeleniumLibrary">
-<doc>Simulates the user clicking the back button on their browser.</doc>
-<status status="PASS" start="2024-08-01T11:16:03.158532" elapsed="2.775345"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-08-01T11:16:05.934817" level="INFO">Clicking element 'id=ContentSite_Basketcontrol1_rptBasket_rptBasketItems_0_lbtRemoveProduct_0'.</msg>
-<arg>${remove_produtos}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-01T11:16:05.934450" elapsed="0.231325"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-08-01T11:16:06.166683" level="INFO">Clicking element 'css=#perfil-hidden &gt; img'.</msg>
-<arg>${menu_logout}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-01T11:16:06.166209" elapsed="3.538571"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-08-01T11:16:09.706010" level="INFO">Clicking element 'css=li:nth-child(11) &gt; a:nth-child(2)'.</msg>
-<arg>${btn_logout}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-01T11:16:09.705495" elapsed="0.187634"/>
-</kw>
-<status status="PASS" start="2024-08-01T11:15:56.843854" elapsed="13.049638"/>
-</kw>
-<kw name="Fechar navegador" owner="base_page" type="TEARDOWN">
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-08-01T11:16:10.398864" level="INFO">Slept 500 milliseconds.</msg>
-<arg>500ms</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-08-01T11:16:09.898340" elapsed="0.501108"/>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-08-01T11:16:10.400360" elapsed="0.637406"/>
-</kw>
-<status status="PASS" start="2024-08-01T11:16:09.897518" elapsed="1.140589"/>
-</kw>
-<status status="PASS" start="2024-08-01T11:14:07.719085" elapsed="123.320062"/>
+<robot generator="Robot 7.0.1 (Python 3.12.2 on darwin)" generated="2024-08-09T17:52:47.615980" rpa="false" schemaversion="5">
+<suite id="s1" name="Consulta Produto Mobile Simples" source="/Users/helena_czekster/Desktop/QA/Iterasys/ListaFinal4/tests/mobile/consulta_produto_mobile_simples.robot">
+<test id="s1-t1" name="Selecionar Orquidea" line="38">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=Android</arg>
+<arg>appium:platformVersion=9.0</arg>
+<arg>appium:deviceName=Samsung Galaxy S9 FHD GoogleAPI Emulator</arg>
+<arg>browserName=chrome</arg>
+<arg>appium:automationName=uiautomator2</arg>
+<arg>appium:ensureWebviewsHavePages=${True}</arg>
+<arg>appium:url=https://www.giulianaflores.com.br/</arg>
+<arg>appium:nativeWebScreenshot=${True}</arg>
+<arg>appium:newCommandTimeout=${3600}</arg>
+<arg>appium:connectHardwareKeyboard=${True}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.1/cli/args/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2024-08-09T17:52:48.181395" elapsed="42.023087"/>
+</kw>
+<kw name="Go To Url" owner="AppiumLibrary">
+<arg>https://www.giulianaflores.com.br/</arg>
+<doc>Opens URL in default web browser.</doc>
+<status status="PASS" start="2024-08-09T17:53:30.206940" elapsed="8.288668"/>
+</kw>
+<kw name="Get Contexts" owner="AppiumLibrary">
+<msg time="2024-08-09T17:53:38.624329" level="INFO">['NATIVE_APP', 'CHROMIUM']</msg>
+<msg time="2024-08-09T17:53:38.631226" level="INFO">${contexts} = ['NATIVE_APP', 'CHROMIUM']</msg>
+<var>${contexts}</var>
+<doc>Get available contexts.</doc>
+<status status="PASS" start="2024-08-09T17:53:38.497100" elapsed="0.138001"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-08-09T17:53:38.639753" level="INFO">['NATIVE_APP', 'CHROMIUM']</msg>
+<arg>${contexts}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-08-09T17:53:38.638611" elapsed="0.001826"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${contexts}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-08-09T17:53:38.647585" elapsed="0.003296"/>
+</kw>
+<kw name="Switch To Context" owner="AppiumLibrary">
+<arg>NATIVE_APP</arg>
+<doc>Switch to a new context</doc>
+<status status="PASS" start="2024-08-09T17:53:38.653740" elapsed="0.092714"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<arg>${btn_aceitar_notificacoes}</arg>
+<arg>10000ms</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-08-09T17:53:38.748637" elapsed="3.023350"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-08-09T17:53:41.789054" level="INFO">Clicking element 'android=new UiSelector().resourceId("com.android.chrome:id/positive_button")'.</msg>
+<arg>${btn_aceitar_notificacoes}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-08-09T17:53:41.773301" elapsed="2.499845"/>
+</kw>
+<kw name="Switch To Context" owner="AppiumLibrary">
+<arg>CHROMIUM</arg>
+<doc>Switch to a new context</doc>
+<status status="PASS" start="2024-08-09T17:53:44.278599" elapsed="0.226194"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-08-09T17:53:44.522971" level="INFO">Clicking element 'xpath=//div[contains(text(),'Aceitar')]'.</msg>
+<msg time="2024-08-09T17:53:48.949685" level="INFO">xpath criteria: //div[contains(text(),'Aceitar')]</msg>
+<arg>${btn_aceitar_preferencias}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-08-09T17:53:44.506384" elapsed="4.444483"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-08-09T17:53:50.479819" level="INFO">xpath criteria: //h3[contains(text(),'Dupla de Orquídeas Amarelas para Presente')]</msg>
+<arg>${lbl_nome_produto_um}</arg>
+<arg>10000ms</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-08-09T17:53:48.953661" elapsed="1.527950"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2024-08-09T17:53:50.513912" level="INFO">Verifying element 'xpath=//h3[contains(text(),'Dupla de Orquídeas Amarelas para Presente')]' contains exactly text 'Dupla de Orquídeas Amarelas para Presente'.</msg>
+<msg time="2024-08-09T17:53:51.296185" level="INFO">xpath criteria: //h3[contains(text(),'Dupla de Orquídeas Amarelas para Presente')]</msg>
+<arg>${lbl_nome_produto_um}</arg>
+<arg>Dupla de Orquídeas Amarelas para Presente</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2024-08-09T17:53:50.483749" elapsed="0.813570"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2024-08-09T17:53:51.318386" level="INFO">Verifying element 'css=div.container_full:nth-child(11) main.content-site:nth-child(8) main.main:nth-child(3) section.product-container:nth-child(3) div.product-container-left main.slider.content-left div.carousel-position-left.banner-product.owl-carousel.owl-theme div.owl-wrapper-outer div.owl-wrapper div.owl-item:nth-child(1) div.product-item a.list-carousel div.price &gt; span.actual-price' contains exactly text 'R$ 199,90'.</msg>
+<arg>${lbl_preco_produto_um}</arg>
+<arg>R$ 199,90</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2024-08-09T17:53:51.299051" elapsed="0.721246"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<arg>${img_produto_um}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-08-09T17:53:52.021624" elapsed="0.095495"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-08-09T17:53:52.131261" level="INFO">Clicking element 'css=div.container_full:nth-child(11) main.content-site:nth-child(8) main.main:nth-child(3) section.product-container:nth-child(3) div.product-container-left main.slider.content-left div.carousel-position-left.banner-product.owl-carousel.owl-theme div.owl-wrapper-outer div.owl-wrapper div.owl-item:nth-child(1) div.product-item a.list-carousel div.image-content &gt; img:nth-child(1)'.</msg>
+<arg>${img_produto_um}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-08-09T17:53:52.118871" elapsed="3.909845"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-08-09T17:53:56.620024" level="INFO">xpath criteria: //span[@id='ContentSite_lblProductDsName']</msg>
+<arg>${lbl_nome_produto_dois}</arg>
+<arg>10000ms</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-08-09T17:53:56.030087" elapsed="0.590672"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2024-08-09T17:53:56.639377" level="INFO">Verifying element 'xpath=//span[@id='ContentSite_lblProductDsName']' contains exactly text 'DUPLA DE ORQUÍDEAS AMARELAS PARA PRESENTE'.</msg>
+<msg time="2024-08-09T17:53:57.309411" level="INFO">xpath criteria: //span[@id='ContentSite_lblProductDsName']</msg>
+<arg>${lbl_nome_produto_dois}</arg>
+<arg>DUPLA DE ORQUÍDEAS AMARELAS PARA PRESENTE</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2024-08-09T17:53:56.622000" elapsed="0.688497"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2024-08-09T17:53:57.322478" level="INFO">Verifying element 'css=div.container_full:nth-child(13) main.content-site:nth-child(4) div:nth-child(9) div.prod:nth-child(1) div.prod_col2 div.preco_prod:nth-child(7) &gt; span.precoPor_prod:nth-child(3)' contains exactly text 'R$ 199,90'.</msg>
+<arg>${lbl_preco_produto_dois}</arg>
+<arg>R$ 199,90</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2024-08-09T17:53:57.313319" elapsed="0.232512"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-08-09T17:53:57.563019" level="INFO">Clicking element 'css=#placeholder-mobile'.</msg>
+<arg>${btn_cep}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-08-09T17:53:57.547069" elapsed="1.859235"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-08-09T17:53:59.423485" level="INFO">Typing text '04535' into text field 'css=#ContentSite_txtZip'</msg>
+<arg>${cep_parte_um}</arg>
+<arg>04535</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-08-09T17:53:59.412700" elapsed="0.659535"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-08-09T17:54:00.134863" level="INFO">Typing text '902' into text field 'css=#ContentSite_txtZipComplement'</msg>
+<arg>${cep_parte_dois}</arg>
+<arg>902</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-08-09T17:54:00.073639" elapsed="0.660149"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-08-09T17:54:00.753374" level="INFO">Clicking element 'xpath=//body/form[@id='form1']/div[3]/main[1]/div[6]/div[1]/div[2]/div[14]/div[1]/div[1]/span[2]'.</msg>
+<msg time="2024-08-09T17:54:02.266189" level="INFO">xpath criteria: //body/form[@id='form1']/div[3]/main[1]/div[6]/div[1]/div[2]/div[14]/div[1]/div[1]/span[2]</msg>
+<arg>${btn_ok}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-08-09T17:54:00.735155" elapsed="1.531911"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-08-09T17:54:02.513192" level="INFO">xpath criteria: //a[contains(text(),'HOJE')]</msg>
+<arg>${ico_dia}</arg>
+<arg>10000ms</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-08-09T17:54:02.268889" elapsed="0.244851"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-08-09T17:54:02.523372" level="INFO">Clicking element 'xpath=//a[contains(text(),'HOJE')]'.</msg>
+<msg time="2024-08-09T17:54:04.005427" level="INFO">xpath criteria: //a[contains(text(),'HOJE')]</msg>
+<arg>${ico_dia}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-08-09T17:54:02.514774" elapsed="1.491231"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-08-09T17:54:04.315337" level="INFO">xpath criteria: //body/form[@id='form1']/div[3]/main[1]/div[6]/div[1]/div[2]/div[10]/div[3]/div[6]/div[1]/ul[1]/li[1]/input[1]</msg>
+<arg>${ico_turno}</arg>
+<arg>10000ms</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-08-09T17:54:04.007584" elapsed="0.308827"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-08-09T17:54:04.337249" level="INFO">Clicking element 'xpath=//body/form[@id='form1']/div[3]/main[1]/div[6]/div[1]/div[2]/div[10]/div[3]/div[6]/div[1]/ul[1]/li[1]/input[1]'.</msg>
+<msg time="2024-08-09T17:54:06.877574" level="INFO">xpath criteria: //body/form[@id='form1']/div[3]/main[1]/div[6]/div[1]/div[2]/div[10]/div[3]/div[6]/div[1]/ul[1]/li[1]/input[1]</msg>
+<arg>${ico_turno}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-08-09T17:54:04.318131" elapsed="2.560551"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<arg>${lbl_nome_produto_tres}</arg>
+<arg>20000ms</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-08-09T17:54:06.880046" elapsed="3.048540"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2024-08-09T17:54:09.940437" level="INFO">Verifying element 'css=div.giuliana2013:nth-child(13) div.content_checkout div.content_basket:nth-child(5) div.upnBasket:nth-child(4) div.box_basket:nth-child(2) div.basket:nth-child(2) ul.prods_basket li:nth-child(1) div.info_prod_basket:nth-child(2) span.prodBasket_nome:nth-child(1) &gt; a:nth-child(1)' contains exactly text 'Dupla de Orquídeas Amarelas para Presente'.</msg>
+<arg>${lbl_nome_produto_tres}</arg>
+<arg>Dupla de Orquídeas Amarelas para Presente</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2024-08-09T17:54:09.930352" elapsed="0.489832"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2024-08-09T17:54:10.437777" level="INFO">Verifying element 'xpath=//body/form[@id='form1']/div[2]/div[3]/div[5]/div[3]/div[1]/div[2]/ul[2]/li[1]/div[4]/span[2]' contains exactly text 'R$ 199,90'.</msg>
+<msg time="2024-08-09T17:54:10.594776" level="INFO">xpath criteria: //body/form[@id='form1']/div[2]/div[3]/div[5]/div[3]/div[1]/div[2]/ul[2]/li[1]/div[4]/span[2]</msg>
+<arg>${lbl_preco_produto_tres}</arg>
+<arg>R$ 199,90</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2024-08-09T17:54:10.424625" elapsed="0.171148"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-08-09T17:54:10.681173" level="INFO">xpath criteria: //a[@id='ContentSite_Basketcontrol1_rptBasket_imbFinalize_0']</msg>
+<arg>${ico_continuar}</arg>
+<arg>10000ms</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-08-09T17:54:10.597661" elapsed="0.084297"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-08-09T17:54:10.690670" level="INFO">Clicking element 'xpath=//a[@id='ContentSite_Basketcontrol1_rptBasket_imbFinalize_0']'.</msg>
+<msg time="2024-08-09T17:54:11.673279" level="INFO">xpath criteria: //a[@id='ContentSite_Basketcontrol1_rptBasket_imbFinalize_0']</msg>
+<arg>${ico_continuar}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-08-09T17:54:10.683178" elapsed="0.990783"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-08-09T17:54:12.816693" level="INFO">xpath criteria: //span[contains(text(),'DIGITE SEU E-MAIL OU CPF')]
+xpath criteria: //span[contains(text(),'DIGITE SEU E-MAIL OU CPF')]</msg>
+<arg>${txt_login}</arg>
+<arg>10000ms</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-08-09T17:54:11.678492" elapsed="1.138810"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2024-08-09T17:54:12.838830" level="INFO">Verifying element 'xpath=//span[contains(text(),'DIGITE SEU E-MAIL OU CPF')]' contains exactly text 'DIGITE SEU E-MAIL OU CPF'.</msg>
+<msg time="2024-08-09T17:54:13.401138" level="INFO">xpath criteria: //span[contains(text(),'DIGITE SEU E-MAIL OU CPF')]</msg>
+<arg>${txt_login}</arg>
+<arg>DIGITE SEU E-MAIL OU CPF</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2024-08-09T17:54:12.818818" elapsed="0.583029"/>
+</kw>
+<kw name="Close Application" owner="AppiumLibrary" type="TEARDOWN">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" start="2024-08-09T17:54:13.404063" elapsed="0.420051"/>
+</kw>
+<status status="PASS" start="2024-08-09T17:52:48.177693" elapsed="85.649588"/>
 </test>
-<status status="PASS" start="2024-08-01T11:14:07.708114" elapsed="123.332999"/>
-</suite>
-<status status="PASS" start="2024-08-01T11:14:07.319509" elapsed="123.725774"/>
+<status status="PASS" start="2024-08-09T17:52:47.638426" elapsed="86.202347"/>
 </suite>
 <statistics>
 <total>
@@ -429,8 +251,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Po">Po</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1" name="Fluxo Compras Po">Po.Fluxo Compras Po</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Consulta Produto Mobile Simples">Consulta Produto Mobile Simples</stat>
 </suite>
 </statistics>
 <errors>
