@@ -27,11 +27,9 @@ ${cep_parte_dois}    css=#ContentSite_txtZipComplement
 ${btn_ok}    xpath=//body/form[@id='form1']/div[3]/main[1]/div[6]/div[1]/div[2]/div[14]/div[1]/div[1]/span[2]
 ${ico_dia}    xpath=//a[contains(text(),'HOJE')]
 ${ico_turno}    xpath=//body/form[@id='form1']/div[3]/main[1]/div[6]/div[1]/div[2]/div[10]/div[3]/div[6]/div[1]/ul[1]/li[1]/input[1]
-
 ${lbl_nome_produto_tres}    css=div.giuliana2013:nth-child(13) div.content_checkout div.content_basket:nth-child(5) div.upnBasket:nth-child(4) div.box_basket:nth-child(2) div.basket:nth-child(2) ul.prods_basket li:nth-child(1) div.info_prod_basket:nth-child(2) span.prodBasket_nome:nth-child(1) > a:nth-child(1)
 ${lbl_preco_produto_tres}    xpath=//body/form[@id='form1']/div[2]/div[3]/div[5]/div[3]/div[1]/div[2]/ul[2]/li[1]/div[4]/span[2]
 ${ico_continuar}    xpath=//a[@id='ContentSite_Basketcontrol1_rptBasket_imbFinalize_0']
-
 ${txt_login}    xpath=//span[contains(text(),'DIGITE SEU E-MAIL OU CPF')]
 
 *** Test Cases ***

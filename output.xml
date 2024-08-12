@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0.1 (Python 3.12.2 on darwin)" generated="2024-08-09T17:52:47.615980" rpa="false" schemaversion="5">
-<suite id="s1" name="Consulta Produto Mobile Simples" source="/Users/helena_czekster/Desktop/QA/Iterasys/ListaFinal4/tests/mobile/consulta_produto_mobile_simples.robot">
-<test id="s1-t1" name="Selecionar Orquidea" line="38">
+<robot generator="Robot 7.0.1 (Python 3.12.2 on darwin)" generated="2024-08-12T21:40:06.871062" rpa="false" schemaversion="5">
+<suite id="s1" name="Po" source="/Users/helena_czekster/Desktop/QA/Iterasys/ListaFinal4/tests/mobile/po">
+<suite id="s1-s1" name="Consulta Produto Mobile Po" source="/Users/helena_czekster/Desktop/QA/Iterasys/ListaFinal4/tests/mobile/po/consulta_produto_mobile_po.robot">
+<test id="s1-s1-t1" name="Selecionar Flor" line="5">
+<kw name=" Abrir Application" owner="base_page_mobile" type="SETUP">
 <kw name="Open Application" owner="AppiumLibrary">
 <arg>${REMOTE_URL}</arg>
 <arg>platformName=Android</arg>
@@ -21,228 +23,270 @@ Please check https://appium.io/docs/en/2.1/cli/args/
 | remote_url          | Yes    | Appium server url |
 | alias               | no     | alias             |
 | strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
-<status status="PASS" start="2024-08-09T17:52:48.181395" elapsed="42.023087"/>
+<status status="PASS" start="2024-08-12T21:40:07.329167" elapsed="40.289164"/>
 </kw>
 <kw name="Go To Url" owner="AppiumLibrary">
 <arg>https://www.giulianaflores.com.br/</arg>
 <doc>Opens URL in default web browser.</doc>
-<status status="PASS" start="2024-08-09T17:53:30.206940" elapsed="8.288668"/>
+<status status="PASS" start="2024-08-12T21:40:47.619182" elapsed="10.632497"/>
 </kw>
 <kw name="Get Contexts" owner="AppiumLibrary">
-<msg time="2024-08-09T17:53:38.624329" level="INFO">['NATIVE_APP', 'CHROMIUM']</msg>
-<msg time="2024-08-09T17:53:38.631226" level="INFO">${contexts} = ['NATIVE_APP', 'CHROMIUM']</msg>
+<msg time="2024-08-12T21:40:58.379888" level="INFO">['NATIVE_APP', 'CHROMIUM']</msg>
+<msg time="2024-08-12T21:40:58.383793" level="INFO">${contexts} = ['NATIVE_APP', 'CHROMIUM']</msg>
 <var>${contexts}</var>
 <doc>Get available contexts.</doc>
-<status status="PASS" start="2024-08-09T17:53:38.497100" elapsed="0.138001"/>
+<status status="PASS" start="2024-08-12T21:40:58.252591" elapsed="0.131795"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-08-09T17:53:38.639753" level="INFO">['NATIVE_APP', 'CHROMIUM']</msg>
+<msg time="2024-08-12T21:40:58.387291" level="INFO">['NATIVE_APP', 'CHROMIUM']</msg>
 <arg>${contexts}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-08-09T17:53:38.638611" elapsed="0.001826"/>
+<status status="PASS" start="2024-08-12T21:40:58.385171" elapsed="0.002394"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${contexts}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-08-09T17:53:38.647585" elapsed="0.003296"/>
+<status status="PASS" start="2024-08-12T21:40:58.388062" elapsed="0.002334"/>
 </kw>
 <kw name="Switch To Context" owner="AppiumLibrary">
 <arg>NATIVE_APP</arg>
 <doc>Switch to a new context</doc>
-<status status="PASS" start="2024-08-09T17:53:38.653740" elapsed="0.092714"/>
+<status status="PASS" start="2024-08-12T21:40:58.391572" elapsed="0.062254"/>
+</kw>
+<status status="PASS" start="2024-08-12T21:40:07.326015" elapsed="51.128216"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
 <arg>${btn_aceitar_notificacoes}</arg>
 <arg>10000ms</arg>
 <doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="PASS" start="2024-08-09T17:53:38.748637" elapsed="3.023350"/>
+<status status="PASS" start="2024-08-12T21:40:58.455914" elapsed="1.955401"/>
 </kw>
+<kw name="Aceitar notificacoes" owner="selecionar_produto_page_mobile">
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2024-08-09T17:53:41.789054" level="INFO">Clicking element 'android=new UiSelector().resourceId("com.android.chrome:id/positive_button")'.</msg>
+<msg time="2024-08-12T21:41:00.424191" level="INFO">Clicking element 'android=new UiSelector().resourceId("com.android.chrome:id/positive_button")'.</msg>
 <arg>${btn_aceitar_notificacoes}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-08-09T17:53:41.773301" elapsed="2.499845"/>
+<status status="PASS" start="2024-08-12T21:41:00.416378" elapsed="2.467972"/>
+</kw>
+<status status="PASS" start="2024-08-12T21:41:00.413066" elapsed="2.472277"/>
 </kw>
 <kw name="Switch To Context" owner="AppiumLibrary">
 <arg>CHROMIUM</arg>
 <doc>Switch to a new context</doc>
-<status status="PASS" start="2024-08-09T17:53:44.278599" elapsed="0.226194"/>
+<status status="PASS" start="2024-08-12T21:41:02.886695" elapsed="0.119016"/>
 </kw>
+<kw name="Aceitar cookies" owner="selecionar_produto_page_mobile">
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2024-08-09T17:53:44.522971" level="INFO">Clicking element 'xpath=//div[contains(text(),'Aceitar')]'.</msg>
-<msg time="2024-08-09T17:53:48.949685" level="INFO">xpath criteria: //div[contains(text(),'Aceitar')]</msg>
+<msg time="2024-08-12T21:41:03.024253" level="INFO">Clicking element 'xpath=//div[contains(text(),'Aceitar')]'.</msg>
+<msg time="2024-08-12T21:41:06.657501" level="INFO">xpath criteria: //div[contains(text(),'Aceitar')]</msg>
 <arg>${btn_aceitar_preferencias}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-08-09T17:53:44.506384" elapsed="4.444483"/>
+<status status="PASS" start="2024-08-12T21:41:03.011352" elapsed="3.646719"/>
+</kw>
+<status status="PASS" start="2024-08-12T21:41:03.009256" elapsed="3.649313"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
-<msg time="2024-08-09T17:53:50.479819" level="INFO">xpath criteria: //h3[contains(text(),'Dupla de Orquídeas Amarelas para Presente')]</msg>
+<msg time="2024-08-12T21:41:07.888073" level="INFO">xpath criteria: //h3[contains(text(),'Ilustre Mini Orquídea Phalaenopsis Lilás')]</msg>
 <arg>${lbl_nome_produto_um}</arg>
 <arg>10000ms</arg>
 <doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="PASS" start="2024-08-09T17:53:48.953661" elapsed="1.527950"/>
+<status status="PASS" start="2024-08-12T21:41:06.660412" elapsed="1.230223"/>
 </kw>
 <kw name="Element Text Should Be" owner="AppiumLibrary">
-<msg time="2024-08-09T17:53:50.513912" level="INFO">Verifying element 'xpath=//h3[contains(text(),'Dupla de Orquídeas Amarelas para Presente')]' contains exactly text 'Dupla de Orquídeas Amarelas para Presente'.</msg>
-<msg time="2024-08-09T17:53:51.296185" level="INFO">xpath criteria: //h3[contains(text(),'Dupla de Orquídeas Amarelas para Presente')]</msg>
+<msg time="2024-08-12T21:41:07.904746" level="INFO">Verifying element 'xpath=//h3[contains(text(),'Ilustre Mini Orquídea Phalaenopsis Lilás')]' contains exactly text 'Ilustre Mini Orquídea Phalaenopsis Lilás'.</msg>
+<msg time="2024-08-12T21:41:08.266466" level="INFO">xpath criteria: //h3[contains(text(),'Ilustre Mini Orquídea Phalaenopsis Lilás')]</msg>
 <arg>${lbl_nome_produto_um}</arg>
-<arg>Dupla de Orquídeas Amarelas para Presente</arg>
+<arg>Ilustre Mini Orquídea Phalaenopsis Lilás</arg>
 <doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
-<status status="PASS" start="2024-08-09T17:53:50.483749" elapsed="0.813570"/>
+<status status="PASS" start="2024-08-12T21:41:07.893632" elapsed="0.373519"/>
 </kw>
 <kw name="Element Text Should Be" owner="AppiumLibrary">
-<msg time="2024-08-09T17:53:51.318386" level="INFO">Verifying element 'css=div.container_full:nth-child(11) main.content-site:nth-child(8) main.main:nth-child(3) section.product-container:nth-child(3) div.product-container-left main.slider.content-left div.carousel-position-left.banner-product.owl-carousel.owl-theme div.owl-wrapper-outer div.owl-wrapper div.owl-item:nth-child(1) div.product-item a.list-carousel div.price &gt; span.actual-price' contains exactly text 'R$ 199,90'.</msg>
+<msg time="2024-08-12T21:41:08.282073" level="INFO">Verifying element 'xpath=//body/form[@id='form1']/div[3]/main[1]/main[1]/section[2]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/div[1]/a[1]/div[2]/span[2]' contains exactly text 'R$ 59,90'.</msg>
+<msg time="2024-08-12T21:41:08.980870" level="INFO">xpath criteria: //body/form[@id='form1']/div[3]/main[1]/main[1]/section[2]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/div[1]/a[1]/div[2]/span[2]</msg>
 <arg>${lbl_preco_produto_um}</arg>
-<arg>R$ 199,90</arg>
+<arg>R$ 59,90</arg>
 <doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
-<status status="PASS" start="2024-08-09T17:53:51.299051" elapsed="0.721246"/>
+<status status="PASS" start="2024-08-12T21:41:08.269067" elapsed="0.712232"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-08-12T21:41:09.065249" level="INFO">xpath criteria: //body/form[@id='form1']/div[3]/main[1]/main[1]/section[2]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/div[1]/a[1]/div[1]/img[1]</msg>
 <arg>${img_produto_um}</arg>
 <doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="PASS" start="2024-08-09T17:53:52.021624" elapsed="0.095495"/>
+<status status="PASS" start="2024-08-12T21:41:08.983253" elapsed="0.082369"/>
 </kw>
+<kw name="Clicar no produto" owner="selecionar_produto_page_mobile">
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2024-08-09T17:53:52.131261" level="INFO">Clicking element 'css=div.container_full:nth-child(11) main.content-site:nth-child(8) main.main:nth-child(3) section.product-container:nth-child(3) div.product-container-left main.slider.content-left div.carousel-position-left.banner-product.owl-carousel.owl-theme div.owl-wrapper-outer div.owl-wrapper div.owl-item:nth-child(1) div.product-item a.list-carousel div.image-content &gt; img:nth-child(1)'.</msg>
+<msg time="2024-08-12T21:41:09.082872" level="INFO">Clicking element 'xpath=//body/form[@id='form1']/div[3]/main[1]/main[1]/section[2]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/div[1]/a[1]/div[1]/img[1]'.</msg>
+<msg time="2024-08-12T21:41:12.602308" level="INFO">xpath criteria: //body/form[@id='form1']/div[3]/main[1]/main[1]/section[2]/div[1]/main[1]/div[2]/div[1]/div[1]/div[1]/div[1]/a[1]/div[1]/img[1]</msg>
 <arg>${img_produto_um}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-08-09T17:53:52.118871" elapsed="3.909845"/>
+<status status="PASS" start="2024-08-12T21:41:09.076256" elapsed="3.527186"/>
+</kw>
+<status status="PASS" start="2024-08-12T21:41:09.068190" elapsed="3.536527"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
-<msg time="2024-08-09T17:53:56.620024" level="INFO">xpath criteria: //span[@id='ContentSite_lblProductDsName']</msg>
+<msg time="2024-08-12T21:41:12.905380" level="INFO">xpath criteria: //span[@id='ContentSite_lblProductDsName']</msg>
 <arg>${lbl_nome_produto_dois}</arg>
 <arg>10000ms</arg>
 <doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="PASS" start="2024-08-09T17:53:56.030087" elapsed="0.590672"/>
+<status status="PASS" start="2024-08-12T21:41:12.605656" elapsed="0.300620"/>
 </kw>
 <kw name="Element Text Should Be" owner="AppiumLibrary">
-<msg time="2024-08-09T17:53:56.639377" level="INFO">Verifying element 'xpath=//span[@id='ContentSite_lblProductDsName']' contains exactly text 'DUPLA DE ORQUÍDEAS AMARELAS PARA PRESENTE'.</msg>
-<msg time="2024-08-09T17:53:57.309411" level="INFO">xpath criteria: //span[@id='ContentSite_lblProductDsName']</msg>
+<msg time="2024-08-12T21:41:12.918656" level="INFO">Verifying element 'xpath=//span[@id='ContentSite_lblProductDsName']' contains exactly text 'ILUSTRE MINI ORQUÍDEA PHALAENOPSIS LILÁS'.</msg>
+<msg time="2024-08-12T21:41:13.489883" level="INFO">xpath criteria: //span[@id='ContentSite_lblProductDsName']</msg>
 <arg>${lbl_nome_produto_dois}</arg>
-<arg>DUPLA DE ORQUÍDEAS AMARELAS PARA PRESENTE</arg>
+<arg>ILUSTRE MINI ORQUÍDEA PHALAENOPSIS LILÁS</arg>
 <doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
-<status status="PASS" start="2024-08-09T17:53:56.622000" elapsed="0.688497"/>
+<status status="PASS" start="2024-08-12T21:41:12.909023" elapsed="0.581086"/>
 </kw>
 <kw name="Element Text Should Be" owner="AppiumLibrary">
-<msg time="2024-08-09T17:53:57.322478" level="INFO">Verifying element 'css=div.container_full:nth-child(13) main.content-site:nth-child(4) div:nth-child(9) div.prod:nth-child(1) div.prod_col2 div.preco_prod:nth-child(7) &gt; span.precoPor_prod:nth-child(3)' contains exactly text 'R$ 199,90'.</msg>
+<msg time="2024-08-12T21:41:13.505267" level="INFO">Verifying element 'xpath=//body/form[@id='form1']/div[3]/main[1]/div[6]/div[1]/div[2]/div[6]/span[2]' contains exactly text 'R$ 59,90'.</msg>
+<msg time="2024-08-12T21:41:13.660230" level="INFO">xpath criteria: //body/form[@id='form1']/div[3]/main[1]/div[6]/div[1]/div[2]/div[6]/span[2]</msg>
 <arg>${lbl_preco_produto_dois}</arg>
-<arg>R$ 199,90</arg>
+<arg>R$ 59,90</arg>
 <doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
-<status status="PASS" start="2024-08-09T17:53:57.313319" elapsed="0.232512"/>
+<status status="PASS" start="2024-08-12T21:41:13.493499" elapsed="0.167260"/>
 </kw>
+<kw name="Preencher campo CEP" owner="selecionar_dia_entrega_page_mobile">
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2024-08-09T17:53:57.563019" level="INFO">Clicking element 'css=#placeholder-mobile'.</msg>
+<msg time="2024-08-12T21:41:13.680591" level="INFO">Clicking element 'css=#placeholder-mobile'.</msg>
 <arg>${btn_cep}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-08-09T17:53:57.547069" elapsed="1.859235"/>
+<status status="PASS" start="2024-08-12T21:41:13.672682" elapsed="1.334415"/>
 </kw>
+<status status="PASS" start="2024-08-12T21:41:13.664844" elapsed="1.343236"/>
+</kw>
+<kw name="Preencher inicio do campo CEP" owner="selecionar_dia_entrega_page_mobile">
 <kw name="Input Text" owner="AppiumLibrary">
-<msg time="2024-08-09T17:53:59.423485" level="INFO">Typing text '04535' into text field 'css=#ContentSite_txtZip'</msg>
+<msg time="2024-08-12T21:41:15.046372" level="INFO">Typing text '04535' into text field 'css=#ContentSite_txtZip'</msg>
 <arg>${cep_parte_um}</arg>
+<arg>${cep_um}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-08-12T21:41:15.014582" elapsed="0.672994"/>
+</kw>
 <arg>04535</arg>
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<status status="PASS" start="2024-08-09T17:53:59.412700" elapsed="0.659535"/>
+<status status="PASS" start="2024-08-12T21:41:15.012692" elapsed="0.675397"/>
 </kw>
+<kw name="Preencher prefixo do campo CEP" owner="selecionar_dia_entrega_page_mobile">
 <kw name="Input Text" owner="AppiumLibrary">
-<msg time="2024-08-09T17:54:00.134863" level="INFO">Typing text '902' into text field 'css=#ContentSite_txtZipComplement'</msg>
+<msg time="2024-08-12T21:41:15.699583" level="INFO">Typing text '902' into text field 'css=#ContentSite_txtZipComplement'</msg>
 <arg>${cep_parte_dois}</arg>
-<arg>902</arg>
+<arg>${cep_dois}</arg>
 <doc>Types the given `text` into text field identified by `locator`.</doc>
-<status status="PASS" start="2024-08-09T17:54:00.073639" elapsed="0.660149"/>
+<status status="PASS" start="2024-08-12T21:41:15.692555" elapsed="0.592108"/>
 </kw>
+<arg>902</arg>
+<status status="PASS" start="2024-08-12T21:41:15.689834" elapsed="0.595946"/>
+</kw>
+<kw name="Clicar botao OK" owner="selecionar_dia_entrega_page_mobile">
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2024-08-09T17:54:00.753374" level="INFO">Clicking element 'xpath=//body/form[@id='form1']/div[3]/main[1]/div[6]/div[1]/div[2]/div[14]/div[1]/div[1]/span[2]'.</msg>
-<msg time="2024-08-09T17:54:02.266189" level="INFO">xpath criteria: //body/form[@id='form1']/div[3]/main[1]/div[6]/div[1]/div[2]/div[14]/div[1]/div[1]/span[2]</msg>
+<msg time="2024-08-12T21:41:16.309487" level="INFO">Clicking element 'xpath=//body/form[@id='form1']/div[3]/main[1]/div[6]/div[1]/div[2]/div[14]/div[1]/div[1]/span[2]'.</msg>
+<msg time="2024-08-12T21:41:17.380844" level="INFO">xpath criteria: //body/form[@id='form1']/div[3]/main[1]/div[6]/div[1]/div[2]/div[14]/div[1]/div[1]/span[2]</msg>
 <arg>${btn_ok}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-08-09T17:54:00.735155" elapsed="1.531911"/>
+<status status="PASS" start="2024-08-12T21:41:16.291105" elapsed="1.090282"/>
+</kw>
+<status status="PASS" start="2024-08-12T21:41:16.288711" elapsed="1.093110"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
-<msg time="2024-08-09T17:54:02.513192" level="INFO">xpath criteria: //a[contains(text(),'HOJE')]</msg>
+<msg time="2024-08-12T21:41:17.587574" level="INFO">xpath criteria: //a[contains(text(),'HOJE')]</msg>
 <arg>${ico_dia}</arg>
 <arg>10000ms</arg>
 <doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="PASS" start="2024-08-09T17:54:02.268889" elapsed="0.244851"/>
+<status status="PASS" start="2024-08-12T21:41:17.384056" elapsed="0.204394"/>
 </kw>
+<kw name="Escolher Data de Entrega" owner="selecionar_dia_entrega_page_mobile">
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2024-08-09T17:54:02.523372" level="INFO">Clicking element 'xpath=//a[contains(text(),'HOJE')]'.</msg>
-<msg time="2024-08-09T17:54:04.005427" level="INFO">xpath criteria: //a[contains(text(),'HOJE')]</msg>
+<msg time="2024-08-12T21:41:17.599534" level="INFO">Clicking element 'xpath=//a[contains(text(),'HOJE')]'.</msg>
+<msg time="2024-08-12T21:41:19.310317" level="INFO">xpath criteria: //a[contains(text(),'HOJE')]</msg>
 <arg>${ico_dia}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-08-09T17:54:02.514774" elapsed="1.491231"/>
+<status status="PASS" start="2024-08-12T21:41:17.592026" elapsed="1.720834"/>
+</kw>
+<status status="PASS" start="2024-08-12T21:41:17.590038" elapsed="1.723554"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
-<msg time="2024-08-09T17:54:04.315337" level="INFO">xpath criteria: //body/form[@id='form1']/div[3]/main[1]/div[6]/div[1]/div[2]/div[10]/div[3]/div[6]/div[1]/ul[1]/li[1]/input[1]</msg>
+<msg time="2024-08-12T21:41:19.492158" level="INFO">xpath criteria: //body/form[@id='form1']/div[3]/main[1]/div[6]/div[1]/div[2]/div[10]/div[3]/div[6]/div[1]/ul[1]/li[7]/input[1]</msg>
 <arg>${ico_turno}</arg>
 <arg>10000ms</arg>
 <doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="PASS" start="2024-08-09T17:54:04.007584" elapsed="0.308827"/>
+<status status="PASS" start="2024-08-12T21:41:19.314848" elapsed="0.177933"/>
 </kw>
+<kw name="Confirmar Turno de Entrega" owner="selecionar_dia_entrega_page_mobile">
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2024-08-09T17:54:04.337249" level="INFO">Clicking element 'xpath=//body/form[@id='form1']/div[3]/main[1]/div[6]/div[1]/div[2]/div[10]/div[3]/div[6]/div[1]/ul[1]/li[1]/input[1]'.</msg>
-<msg time="2024-08-09T17:54:06.877574" level="INFO">xpath criteria: //body/form[@id='form1']/div[3]/main[1]/div[6]/div[1]/div[2]/div[10]/div[3]/div[6]/div[1]/ul[1]/li[1]/input[1]</msg>
+<msg time="2024-08-12T21:41:19.503881" level="INFO">Clicking element 'xpath=//body/form[@id='form1']/div[3]/main[1]/div[6]/div[1]/div[2]/div[10]/div[3]/div[6]/div[1]/ul[1]/li[7]/input[1]'.</msg>
+<msg time="2024-08-12T21:41:23.744615" level="INFO">xpath criteria: //body/form[@id='form1']/div[3]/main[1]/div[6]/div[1]/div[2]/div[10]/div[3]/div[6]/div[1]/ul[1]/li[7]/input[1]</msg>
 <arg>${ico_turno}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-08-09T17:54:04.318131" elapsed="2.560551"/>
+<status status="PASS" start="2024-08-12T21:41:19.495484" elapsed="4.249962"/>
+</kw>
+<status status="PASS" start="2024-08-12T21:41:19.494100" elapsed="4.251814"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
 <arg>${lbl_nome_produto_tres}</arg>
 <arg>20000ms</arg>
 <doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="PASS" start="2024-08-09T17:54:06.880046" elapsed="3.048540"/>
+<status status="PASS" start="2024-08-12T21:41:23.747000" elapsed="3.118353"/>
 </kw>
 <kw name="Element Text Should Be" owner="AppiumLibrary">
-<msg time="2024-08-09T17:54:09.940437" level="INFO">Verifying element 'css=div.giuliana2013:nth-child(13) div.content_checkout div.content_basket:nth-child(5) div.upnBasket:nth-child(4) div.box_basket:nth-child(2) div.basket:nth-child(2) ul.prods_basket li:nth-child(1) div.info_prod_basket:nth-child(2) span.prodBasket_nome:nth-child(1) &gt; a:nth-child(1)' contains exactly text 'Dupla de Orquídeas Amarelas para Presente'.</msg>
+<msg time="2024-08-12T21:41:26.870747" level="INFO">Verifying element 'css=div.giuliana2013:nth-child(13) div.content_checkout div.content_basket:nth-child(5) div.upnBasket:nth-child(4) div.box_basket:nth-child(2) div.basket:nth-child(2) ul.prods_basket li:nth-child(1) div.info_prod_basket:nth-child(2) span.prodBasket_nome:nth-child(1) &gt; a:nth-child(1)' contains exactly text 'Ilustre Mini Orquídea Phalaenopsis Lilás'.</msg>
 <arg>${lbl_nome_produto_tres}</arg>
-<arg>Dupla de Orquídeas Amarelas para Presente</arg>
+<arg>Ilustre Mini Orquídea Phalaenopsis Lilás</arg>
 <doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
-<status status="PASS" start="2024-08-09T17:54:09.930352" elapsed="0.489832"/>
+<status status="PASS" start="2024-08-12T21:41:26.866637" elapsed="0.454586"/>
 </kw>
 <kw name="Element Text Should Be" owner="AppiumLibrary">
-<msg time="2024-08-09T17:54:10.437777" level="INFO">Verifying element 'xpath=//body/form[@id='form1']/div[2]/div[3]/div[5]/div[3]/div[1]/div[2]/ul[2]/li[1]/div[4]/span[2]' contains exactly text 'R$ 199,90'.</msg>
-<msg time="2024-08-09T17:54:10.594776" level="INFO">xpath criteria: //body/form[@id='form1']/div[2]/div[3]/div[5]/div[3]/div[1]/div[2]/ul[2]/li[1]/div[4]/span[2]</msg>
+<msg time="2024-08-12T21:41:27.331910" level="INFO">Verifying element 'css=div.giuliana2013:nth-child(13) div.content_checkout div.content_basket:nth-child(5) div.upnBasket:nth-child(4) div.box_basket:nth-child(2) div.basket:nth-child(2) ul.prods_basket li:nth-child(1) div.preco_prodBasket.preco-total-produto:nth-child(5) &gt; span.precoPor_basket' contains exactly text 'R$ 59,90'.</msg>
 <arg>${lbl_preco_produto_tres}</arg>
-<arg>R$ 199,90</arg>
+<arg>R$ 59,90</arg>
 <doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
-<status status="PASS" start="2024-08-09T17:54:10.424625" elapsed="0.171148"/>
+<status status="PASS" start="2024-08-12T21:41:27.322730" elapsed="0.149593"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
-<msg time="2024-08-09T17:54:10.681173" level="INFO">xpath criteria: //a[@id='ContentSite_Basketcontrol1_rptBasket_imbFinalize_0']</msg>
+<msg time="2024-08-12T21:41:27.545689" level="INFO">xpath criteria: //a[@id='ContentSite_Basketcontrol1_rptBasket_imbFinalize_0']</msg>
 <arg>${ico_continuar}</arg>
 <arg>10000ms</arg>
 <doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="PASS" start="2024-08-09T17:54:10.597661" elapsed="0.084297"/>
+<status status="PASS" start="2024-08-12T21:41:27.473727" elapsed="0.072534"/>
 </kw>
+<kw name="Clicar no botao Continuar" owner="confirma_dados_compra_page_mobile">
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2024-08-09T17:54:10.690670" level="INFO">Clicking element 'xpath=//a[@id='ContentSite_Basketcontrol1_rptBasket_imbFinalize_0']'.</msg>
-<msg time="2024-08-09T17:54:11.673279" level="INFO">xpath criteria: //a[@id='ContentSite_Basketcontrol1_rptBasket_imbFinalize_0']</msg>
+<msg time="2024-08-12T21:41:27.565154" level="INFO">Clicking element 'xpath=//a[@id='ContentSite_Basketcontrol1_rptBasket_imbFinalize_0']'.</msg>
+<msg time="2024-08-12T21:41:28.470691" level="INFO">xpath criteria: //a[@id='ContentSite_Basketcontrol1_rptBasket_imbFinalize_0']</msg>
 <arg>${ico_continuar}</arg>
 <doc>Click element identified by `locator`.</doc>
-<status status="PASS" start="2024-08-09T17:54:10.683178" elapsed="0.990783"/>
+<status status="PASS" start="2024-08-12T21:41:27.552647" elapsed="0.918851"/>
+</kw>
+<status status="PASS" start="2024-08-12T21:41:27.549481" elapsed="0.923233"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
-<msg time="2024-08-09T17:54:12.816693" level="INFO">xpath criteria: //span[contains(text(),'DIGITE SEU E-MAIL OU CPF')]
+<msg time="2024-08-12T21:41:29.948971" level="INFO">xpath criteria: //span[contains(text(),'DIGITE SEU E-MAIL OU CPF')]
 xpath criteria: //span[contains(text(),'DIGITE SEU E-MAIL OU CPF')]</msg>
-<arg>${txt_login}</arg>
+<arg>${txt_pg_quatro}</arg>
 <arg>10000ms</arg>
 <doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="PASS" start="2024-08-09T17:54:11.678492" elapsed="1.138810"/>
+<status status="PASS" start="2024-08-12T21:41:28.473616" elapsed="1.476225"/>
 </kw>
 <kw name="Element Text Should Be" owner="AppiumLibrary">
-<msg time="2024-08-09T17:54:12.838830" level="INFO">Verifying element 'xpath=//span[contains(text(),'DIGITE SEU E-MAIL OU CPF')]' contains exactly text 'DIGITE SEU E-MAIL OU CPF'.</msg>
-<msg time="2024-08-09T17:54:13.401138" level="INFO">xpath criteria: //span[contains(text(),'DIGITE SEU E-MAIL OU CPF')]</msg>
-<arg>${txt_login}</arg>
+<msg time="2024-08-12T21:41:29.986490" level="INFO">Verifying element 'xpath=//span[contains(text(),'DIGITE SEU E-MAIL OU CPF')]' contains exactly text 'DIGITE SEU E-MAIL OU CPF'.</msg>
+<msg time="2024-08-12T21:41:30.127637" level="INFO">xpath criteria: //span[contains(text(),'DIGITE SEU E-MAIL OU CPF')]</msg>
+<arg>${txt_pg_quatro}</arg>
 <arg>DIGITE SEU E-MAIL OU CPF</arg>
 <doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
-<status status="PASS" start="2024-08-09T17:54:12.818818" elapsed="0.583029"/>
+<status status="PASS" start="2024-08-12T21:41:29.951640" elapsed="0.176888"/>
 </kw>
-<kw name="Close Application" owner="AppiumLibrary" type="TEARDOWN">
-<doc>Closes the current application and also close webdriver session.</doc>
-<status status="PASS" start="2024-08-09T17:54:13.404063" elapsed="0.420051"/>
+<kw name="Fechar Application" owner="base_page_mobile" type="TEARDOWN">
+<kw name="Close All Applications" owner="AppiumLibrary">
+<doc>Closes all open applications.</doc>
+<status status="PASS" start="2024-08-12T21:41:30.137463" elapsed="0.372497"/>
 </kw>
-<status status="PASS" start="2024-08-09T17:52:48.177693" elapsed="85.649588"/>
+<status status="PASS" start="2024-08-12T21:41:30.130936" elapsed="0.379722"/>
+</kw>
+<status status="PASS" start="2024-08-12T21:40:07.322658" elapsed="83.189146"/>
 </test>
-<status status="PASS" start="2024-08-09T17:52:47.638426" elapsed="86.202347"/>
+<status status="PASS" start="2024-08-12T21:40:07.289874" elapsed="83.228417"/>
+</suite>
+<status status="PASS" start="2024-08-12T21:40:06.878081" elapsed="83.650717"/>
 </suite>
 <statistics>
 <total>
@@ -251,7 +295,8 @@ xpath criteria: //span[contains(text(),'DIGITE SEU E-MAIL OU CPF')]</msg>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Consulta Produto Mobile Simples">Consulta Produto Mobile Simples</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Po">Po</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Consulta Produto Mobile Po">Po.Consulta Produto Mobile Po</stat>
 </suite>
 </statistics>
 <errors>

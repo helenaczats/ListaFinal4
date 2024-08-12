@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    ../../../pages/base_page.robot
+Resource    ../../../pages_web/base_page.robot
 
 *** Test Cases ***
 Comprar Mini Orquidea Lilas
